@@ -9,6 +9,10 @@ use File::Path;
 use LWP::UserAgent;
 require 'global_function.pl';
 
+# Download the index file from SEC ftp server with three parameters, startYear, endYear and output folder, such as, 1999-2014
+# The downloaded index file contains the link for different financial filings, like 8K and 10K. Then the index file is saved 
+# in a given output folder as a txt file.
+
 my $argvLength = scalar @ARGV;
 my $startYear = 0;
 my $endYear = 0;
