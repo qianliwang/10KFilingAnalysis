@@ -5,6 +5,9 @@ use File::Path;
 use Cwd 'abs_path';
 require 'global_function.pl';
 
+# The 2nd supposed to be executed script.Extract the certain filings from the previously downloaded index file, like 10K. 
+# The extracted corresponding links are saved in another txt file.
+
 if((scalar @ARGV) < 3){
 	die "Please provide at least 3 parameters, the first one is the full index File, the second-to-last one is the filing type, like '10-K', the last one is the directory where the filing index will be saved. \nThank you.\n"
 }
