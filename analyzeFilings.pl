@@ -11,6 +11,10 @@ use Lingua::EN::Fathom;
 use Cwd 'abs_path';
 require 'global_function.pl';
 
+# The 4th script supposed to be executed. With downloaded filings, like 10K, and the txt files containing the wantted 
+# information, like the commpany info and keywords. The script extracts the company information and counts the occurrences 
+# of keywords, then saved the data in a given format for later analysis. 
+
 if((scalar @ARGV) < 2){
 
 	die "Please provide at least 2 parameters, the first one is the directory where filings are saved, the last one is the directory where the report will be saved.\nThank you.\n";
