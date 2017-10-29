@@ -8,6 +8,11 @@ use File::Slurp;
 use Cwd 'abs_path';
 require 'global_function.pl';
 
+# The 3rd script supposed to be executed. Once the type of filing is determined, the filings are downloaded agin from SEC 
+# ftp server. Since the size of data could be up to GBs, we use a log file to record all the downloaded filings, in case
+# the downloading process is interrupted.
+
+
 if((scalar @ARGV) < 2){
 
 	die "Please provide at least 2 parameters, the first one is the index file, the last one is the directory where filings will be saved.\nThank you.\n";
